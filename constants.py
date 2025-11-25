@@ -5,10 +5,23 @@ VEHICLE_PATH = DATA_PATH + '*/VEHICLE.csv'
 PERSON_PATH = DATA_PATH + '*/PERSON.csv'
 MERGED_DATA_PATH = DATA_PATH + 'full_merged_data.csv'
 
-accident_cols = ['ST_CASE', 'YEAR', 'FATALS']
-distract_cols = ['ST_CASE', 'VEH_NO', 'MDRDSTRD']
-vehicle_cols = ['ST_CASE', 'VEH_NO']
-person_cols = ['ST_CASE', 'VEH_NO', 'PER_TYP', 'INJ_SEV']
+accident_cols = [
+	'STATE', 'ST_CASE', 'CITY', 'COUNTY',
+	'DAY', 'MONTH', 'YEAR', 'DAY_WEEK', 'HOUR', 'MINUTE',
+    'LGT_COND', 'WEATHER', 'FATALS'
+]
+vehicle_cols = [
+	'STATE', 'ST_CASE', 'VEH_NO', 'NUMOCCS',
+	'MOD_YEAR', 'MAKE', 'PREV_ACC', 'PREV_DWI',
+	
+]
+person_cols = [
+	'STATE', 'ST_CASE', 'VEH_NO', 'PER_NO',
+	'AGE', 'SEX', 'PER_TYP', 'INJ_SEV', 'HISPANIC'
+]
+distract_cols = [
+	'STATE', 'ST_CASE', 'VEH_NO', 'MDRDSTRD'
+]
 
 # Available from 2010-2019 as MDRDSTRD
 distraction_codes = {
