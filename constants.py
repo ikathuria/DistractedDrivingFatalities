@@ -4,6 +4,7 @@ DISTRACT_PATH = DATA_PATH + '*/DISTRACT.csv'
 VEHICLE_PATH = DATA_PATH + '*/VEHICLE.csv'
 PERSON_PATH = DATA_PATH + '*/PERSON.csv'
 MERGED_DATA_PATH = DATA_PATH + 'full_merged_data.csv'
+SUMMARY_DATA_PATH = DATA_PATH + 'summary_data.csv'
 
 accident_cols = [
 	'STATE', 'ST_CASE', 'CITY', 'COUNTY',
@@ -50,6 +51,7 @@ distraction_codes = {
     93: "Inattention - Inattentive, Details Unknown",
     97: "Lost in Thought/Daydreaming",
 
+    16: "No Driver Present/Unknown if Driver Present",
     92: "Distraction - Distracted, Details Unknown",
     96: "Not Reported",
     98: "Other Distraction",
@@ -57,7 +59,7 @@ distraction_codes = {
 }
 
 distraction_categories = {
-	'Not Distracted/Unknown': [0, 1, 92, 96, 98, 99],
+	'Not Distracted/Unknown': [0, 1, 16, 92, 96, 98, 99],
 	'Carelessness/Inattention': [17, 18, 19, 93, 97],
 	'Passenger/Moving Objects': [3, 4, 12],
 	'Mobile Phone': [5, 6, 15],
